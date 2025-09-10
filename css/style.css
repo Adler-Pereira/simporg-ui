@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.caladea-regular {
+  font-family: "Caladea", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.caladea-bold {
+  font-family: "Caladea", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.caladea-regular-italic {
+  font-family: "Caladea", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.caladea-bold-italic {
+  font-family: "Caladea", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.icon-wrapper {
+  position: relative;
+  width: 76px;
+  /* mesmo tamanho do maior svg */
+  height: 76px;
+}
+
+.icon-wrapper svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.big-icon-logo {
+  width: 70px;
+  height: 70px;
+}
+
+.small-icon-logo {
+  width: 32px;
+  height: 32px;
+}
+
+.bg-image {
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-image-left {
+  background-image: url(../images/bg-login-left.png);
+}
+
+.bg-image-right {
+  background-image: url(../images/bg-login-right.png);
+}
+
+.remember-check:checked {
+  accent-color: #e37e03;
+}
