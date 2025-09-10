@@ -64,3 +64,17 @@
 .remember-check:checked {
   accent-color: #e37e03;
 }
+
+.togglePassword {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6c757d;
+}
+
+.password-wrapper {
+  position: relative;
+}
