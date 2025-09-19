@@ -121,10 +121,14 @@
   background-color: var(--bg-terciary-color);
 }
 
+.search-icon {
+
+}
+
 .search-bar {
   background-color: #00000033;
-  width: 60%;
   height: 30px;
+  padding-left: 20px;
 }
 
 .search-bar::placeholder {
