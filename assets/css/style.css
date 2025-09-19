@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+:root{
+  --bg-primary-color: #1E1E1E;
+  --bg-secundary-color: #262626;
+  --bg-terciary-color: #E37E03;
+}
 
 .caladea-regular {
   font-family: "Caladea", serif;
@@ -38,6 +43,21 @@
   transform: translate(-50%, -50%);
 }
 
+.icon-wrapper-navbar {
+  position: relative;
+  margin-left: 2px;
+  width: 30px;
+  /* mesmo tamanho do maior svg */
+  height: 30px;
+}
+
+.icon-wrapper-navbar svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .big-icon-logo {
   width: 70px;
   height: 70px;
@@ -46,6 +66,16 @@
 .small-icon-logo {
   width: 32px;
   height: 32px;
+}
+
+.big-icon-logo-navbar {
+  width: 30px;
+  height: 30px;
+}
+
+.small-icon-logo-navbar {
+  width: 13.71px;
+  height: 13.71px;
 }
 
 .bg-image {
@@ -77,4 +107,26 @@
 
 .password-wrapper {
   position: relative;
+}
+
+.bg-primary-color {
+  background-color: var(--bg-primary-color);
+}
+
+.bg-secundary-color {
+  background-color: var(--bg-secundary-color);
+}
+
+.bg-terciary-color {
+  background-color: var(--bg-terciary-color);
+}
+
+.search-bar {
+  background-color: #00000033;
+  width: 60%;
+  height: 30px;
+}
+
+.search-bar::placeholder {
+  color: var(--bg-secundary-color);
 }
