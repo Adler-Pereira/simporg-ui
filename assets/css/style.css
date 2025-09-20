@@ -3,6 +3,11 @@
   --bg-primary-color: #1E1E1E;
   --bg-secundary-color: #262626;
   --bg-terciary-color: #E37E03;
+  --bg-quaternary-color: #343A40;
+  --bg-cinco-color: #626262;
+  --bg-seis-color: #ffffff0d;
+  --text-primary-color: #fff;
+  --text-secundary-color: #ffffff40;
 }
 
 .caladea-regular {
@@ -133,4 +138,68 @@
 
 .search-bar::placeholder {
   color: var(--bg-secundary-color);
+}
+
+.scroll-box {
+  overflow-y: auto;
+  height: 100%;
+  border: 10px solid var(--bg-primary-color);
+}
+
+.project-card {
+  background-color: var(--bg-secundary-color);
+  color: var(--text-secundary-color);
+  height: 260px;
+  width: 220px;
+  margin: 25px 20px 30px 45px;
+  border-radius: 15px;
+  border: 1px solid var(--bg-quaternary-color);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.08);
+  text-decoration: none;
+  color: var(--text-secundary-color);
+}
+
+.project-card:hover .square-add-icon {
+  background-color: var(--bg-cinco-color);
+}
+
+.project-card:hover .stick-v, .project-card:hover .stick-h {
+  background-color: var(--bg-secundary-color);
+}
+
+.title-card-project {
+  font-weight: unset;
+  margin: 0;
+}
+
+.square-add-icon {
+  height: 50px;
+  width: 50px;
+  background-color: var(--bg-seis-color);
+  border: 2px solid var(--bg-cinco-color);
+  border-radius: 3px;
+  transition: background 0.3s;
+}
+
+.container-plus-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.stick-v {
+  height: 100%;
+  width: 2px;
+  background-color: var(--bg-cinco-color);
+  transition: background 0.3s;
+}
+
+.stick-h {
+  width: 100%;
+  height: 2px;
+  background-color: var(--bg-cinco-color);
+  transition: background 0.3s;
 }
