@@ -8,6 +8,7 @@
   --bg-seis-color: #ffffff0d;
   --text-primary-color: #fff;
   --text-secundary-color: #ffffff40;
+  --border-color: #00000033;
 }
 
 .caladea-regular {
@@ -127,13 +128,15 @@
 }
 
 .search-icon {
-
+  height: 30px;
+  margin-left: 5px;
 }
 
 .search-bar {
-  background-color: #00000033;
+  background-color: #00000026;
   height: 30px;
   padding-left: 20px;
+   border: 1px solid var(--border-color);
 }
 
 .search-bar::placeholder {
