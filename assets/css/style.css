@@ -11,6 +11,10 @@
   --border-color: #00000033;
 }
 
+.text-primary-color {
+  color: var(--text-primary-color);
+}
+
 .caladea-regular {
   font-family: "Caladea", serif;
   font-weight: 400;
@@ -45,16 +49,13 @@
 .profile-name {
   font-size: 14px;
   font-weight: 500;
-  color: var(--text-primary-color);
 }
 
 .my-projects-font {
   margin: 0;
-  margin-top: 10px;
   font-weight: 500;
   text-transform: uppercase;
   font-size: 12px;
-  color: var(--text-primary-color);
 }
 
 .edit-icon {
@@ -62,6 +63,33 @@
   width: 20px;
   height: 20px;
   transform: translate(22.5px, 47.5px);
+}
+
+.scroll-box-projects {
+  overflow-y: auto;
+  height: calc(100vh - 167.44px); /* ajusta o valor conforme a altura do topo */
+  border: 10px solid transparent;
+  border-left: 0;
+  border-right: 0;
+  list-style-type: none;
+  padding: 0;
+  scrollbar-color: var(--bg-secundary-color) var(--bg-seis-color);
+}
+
+.scroll-box-projects a li {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.scroll-box-projects a li:hover {
+  background-color: var(--bg-primary-color);
+}
+
+.scroll-box-projects a {
+  color: var(--text-primary-color);
+  text-decoration: none;
 }
 
 .icon-wrapper {
