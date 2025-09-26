@@ -1,4 +1,7 @@
 const togglePasswordIcons = document.querySelectorAll('.togglePassword');
+const projectCard = document.querySelectorAll('.project-card');
+const closeFormProj = document.getElementById('close-form-project');
+const formProj = document.getElementById('form-project');
 
 togglePasswordIcons.forEach(function (icon) {
   icon.addEventListener('click', function () {
@@ -12,4 +15,14 @@ togglePasswordIcons.forEach(function (icon) {
     this.classList.toggle('fa-eye');
     this.classList.toggle('fa-eye-slash');
   });
+});
+
+projectCard.forEach(function (card) {
+  card.addEventListener('click', function () {
+    formProj.style.display = 'flex';
+  });  
+});
+
+closeFormProj.addEventListener('click', function () {
+  formProj.style.display = 'none';
 });
