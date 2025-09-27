@@ -2,6 +2,8 @@ const togglePasswordIcons = document.querySelectorAll('.togglePassword');
 const projectCard = document.querySelectorAll('.project-card');
 const closeFormProj = document.getElementById('close-form-project');
 const formProj = document.getElementById('form-project');
+const previewBgProj = document.getElementById('preview-bg-project');
+const optionColor = document.querySelectorAll('.container-color-option');
 
 togglePasswordIcons.forEach(function (icon) {
   icon.addEventListener('click', function () {
@@ -25,4 +27,10 @@ projectCard.forEach(function (card) {
 
 closeFormProj.addEventListener('click', function () {
   formProj.style.display = 'none';
+});
+
+optionColor.forEach(function (option) {
+  option.addEventListener('click', function () {
+    previewBgProj.style.backgroundColor = option.style.backgroundColor;
+  });
 });

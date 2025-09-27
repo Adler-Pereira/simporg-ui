@@ -11,6 +11,10 @@
   --border-color: #00000033;
 }
 
+html {
+  scrollbar-color: var(--bg-secundary-color) var(--bg-seis-color);
+}
+
 .text-primary-color {
   color: var(--text-primary-color);
 }
@@ -208,7 +212,6 @@
 
 .project-card {
   background-color: var(--bg-secundary-color);
-  color: var(--text-secundary-color);
   height: 260px;
   width: 220px;
   margin: 25px 20px 30px 45px;
@@ -231,9 +234,9 @@
   background-color: var(--bg-secundary-color);
 }
 
-.title-project-card {
+.transparent-text {
+  color: #ffffff40;
   font-weight: unset;
-  margin: 0;
 }
 
 .square-add-icon {
@@ -282,5 +285,51 @@
 .close-icon {
   width: 25px;
   height: 25px;
+  cursor: pointer;
+}
+
+#preview-bg-project {
+  height: 200px;
+  background-color: var(--bg-terciary-color);
+  border: .5px solid var(--bg-quaternary-color);
+}
+
+.label-form-proj {
+  font-size: 16px;
+}
+
+.label-form-proj label {
+  margin-bottom: .25rem;
+}
+
+.form-input {
+  width: 100%;
+  background-color: var(--bg-seis-color);
+  border: 1px solid var(--bg-quaternary-color);
+  font-size: 14px;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+#form-textarea {
+  display: flex;
+  height: 100px;
+  resize: none;
+}
+
+.form-input-submit {
+  width: 100%;
+  background-color: var(--bg-quaternary-color);
+  border: 0;
+  font-weight: 500;
+}
+
+.container-color-option {
+  width: 55px;
+  height: 100%;
+  border: .5px solid var(--bg-quaternary-color);
+  border-radius: 5px;
   cursor: pointer;
 }
