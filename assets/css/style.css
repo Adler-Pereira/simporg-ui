@@ -270,12 +270,12 @@ html {
 .container-form-project {
   z-index: 1;
   height: 100%;
-  display: none;
+  display: flex;
 }
 
 .form-project {
   background-color: var(--bg-secundary-color);
-  height: 450px;
+  height: 425px;
   width: 600px;
   padding: 15px;
   border-radius: 15px;
