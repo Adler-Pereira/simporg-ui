@@ -224,6 +224,7 @@ html {
 .project-card:hover {
   transform: scale(1.08);
   text-decoration: none;
+  color: var(--text-secundary-color);
 }
 
 .project-card:hover .square-add-icon {
@@ -270,7 +271,7 @@ html {
 .container-form-project {
   z-index: 1;
   height: 100%;
-  display: none;
+  display: flex;
 }
 
 .form-project {
@@ -328,7 +329,16 @@ html {
 
 .form-input-submit {
   width: 100%;
-  background-color: var(--color-border-default);
+  background-color: var(--color-bg-highlight);
+  color: var(--color-bg-surface);
+  border: 0;
+  font-weight: 500;
+}
+
+.form-input-submit:hover {
+  filter: brightness(1.2);
+  background-color: var(--color-bg-highlight);
+  color: var(--color-bg-surface);
   border: 0;
   font-weight: 500;
 }
