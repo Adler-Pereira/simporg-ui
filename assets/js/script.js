@@ -4,6 +4,7 @@ const closeFormProj = document.getElementById('close-form-project');
 const formProj = document.getElementById('form-project');
 const previewBgProj = document.getElementById('preview-bg-project');
 const optionColor = document.querySelectorAll('.container-color-option');
+const inputTitleProj = document.getElementById('title-project');
 
 togglePasswordIcons.forEach(function (icon) {
   icon.addEventListener('click', function () {
@@ -22,6 +23,7 @@ togglePasswordIcons.forEach(function (icon) {
 projectCard.forEach(function (card) {
   card.addEventListener('click', function () {
     formProj.style.display = 'flex';
+    inputTitleProj.focus();
   });  
 });
 

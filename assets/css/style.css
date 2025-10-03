@@ -277,7 +277,7 @@ html {
 .form-project {
   background-color: var(--color-bg-surface);
   height: 425px;
-  width: 600px;
+  width: 640px;
   padding: 15px;
   border-radius: 15px;
   border: 1px solid var(--color-border-default);
@@ -297,9 +297,63 @@ html {
 }
 
 .pvw-card-content {
-  height: 70px;
-  width: 60px;
+  height: min-content;
+  width: 67px;
+  padding: 4px;
+  padding-top: 15px;
+  padding-bottom: 4.5px;
   background-color: var(--color-bg-main);
+  border: .5px solid var(--color-border-default);
+  border-radius: 5px;
+}
+
+#pvw-container-icon {
+  height: 27px;
+  width: 100%;
+  margin-bottom: 3px;
+  background-color: var(--color-bg-highlight);
+}
+
+.icon-wrapper-pvw {
+  position: relative;
+  /* mesmo tamanho do maior svg */
+  height: 27.5px;
+}
+
+.icon-wrapper-pvw svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.big-icon-logo-pvw {
+  width: 20px;
+  height: 20px;
+}
+
+.small-icon-logo-pvw {
+  width: 9px;
+  height: 9px;
+}
+
+.pvw-task {
+  width: 100%;
+  height: 12px;
+  margin-bottom: 3px;
+  background-color: var(--color-bg-surface);
+  border: .5px solid var(--color-border-default);
+}
+
+#pvw-img-task {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 3px;
+  background-color: var(--color-bg-highlight);
+  background-image: url(../images/pvw-img-task.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .label-form-proj {
@@ -344,7 +398,7 @@ html {
 }
 
 .container-color-option {
-  width: 55px;
+  width: 22%;
   height: 100%;
   border: .5px solid var(--color-border-default);
   border-radius: 5px;
