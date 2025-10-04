@@ -10,6 +10,7 @@
   --color-text-muted: #ffffff40;
 
   --color-border-default: #343A40;
+  --color-border-muted: #00000033;
 }
 
 html {
@@ -42,6 +43,13 @@ html {
   font-family: "Caladea", serif;
   font-weight: 700;
   font-style: italic;
+}
+
+header{
+  height: 40px;
+  background-color: var(--color-bg-highlight);
+  border: 1px solid var(--color-border-muted);
+  padding: 5px;
 }
 
 .profile {
@@ -198,16 +206,19 @@ html {
   background-color: #00000026;
   height: 30px;
   padding-left: 20px;
-  border: 1px solid #00000033;
+  border: 1px solid var(--color-border-muted);
 }
 
 .search-bar::placeholder {
   color: var(--color-bg-main);
 }
 
-.scroll-box {
+.max-container {
   overflow-y: auto;
   height: 100%;
+}
+
+#cards-proj-hub {
   border: 10px solid var(--color-bg-main);
 }
 
@@ -283,10 +294,15 @@ html {
   border: 1px solid var(--color-border-default);
 }
 
-.close-icon {
+.window-icon {
   width: 25px;
   height: 25px;
   cursor: pointer;
+}
+
+.resize-proj-wkspc {
+  margin-right: 10px;
+  padding: 2px;
 }
 
 #preview-bg-project {
@@ -403,4 +419,14 @@ html {
   border: .5px solid var(--color-border-default);
   border-radius: 5px;
   cursor: pointer;
+}
+
+#project-workspace {
+  display: none;
+  background-color: var(--color-bg-highlight);
+}
+
+#project-workspace .window-icon {
+  fill: var(--color-bg-highlight);
+  stroke: var(--color-bg-highlight);
 }
