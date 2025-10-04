@@ -427,6 +427,6 @@ header{
 }
 
 #project-workspace .window-icon {
-  fill: var(--color-bg-highlight);
-  stroke: var(--color-bg-highlight);
+  fill: var(--color-bg-main);
+  stroke: var(--color-bg-main);
 }
