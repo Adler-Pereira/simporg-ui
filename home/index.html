@@ -122,11 +122,17 @@
                             <button class="btn container-card d-flex justify-content-center align-items-center" id="add-card-text">Adicionar cartão</button>
                             <div class="container-card d-none justify-content-center align-items-center flex-column" id="naming-card">
                                 <div class="container-fluid d-flex flex-column p-0">
-                                    <input class="container-fluid color-text-main input-text pl-1 m-0" type="text" placeholder="Nomear cartão..."/>
+                                    <input id="input-name-card" class="container-fluid color-text-main input-text pl-1 m-0" type="text" placeholder="Nomear cartão..."/>
                                     <div class="container-fluid d-flex justify-content-between p-0 mt-2">
                                         <button class="btn btn-highlight btn-naming-card" id="btn-cancel-name">Cancelar</button>
-                                        <button class="btn btn-default btn-naming-card" id="btn-add-name">Adicionar</button>
+                                        <button class="btn btn-default btn-naming-card" id="btn-conf-name">Confirmar</button>
                                     </div>
+                                </div>
+                            </div>
+                            <div id="created-card" class="container-card d-none flex-column" style="padding: 20px;">
+                                <div class="container-fluid d-flex justify-content-between p-0">
+                                    <h6 id="name-card" class="color-text-main m-0" style="font-weight: normal;"></h6>
+                                    <svg class="ellipsis-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 208C289.1 208 264 182.9 264 152C264 121.1 289.1 96 320 96C350.9 96 376 121.1 376 152C376 182.9 350.9 208 320 208zM320 432C350.9 432 376 457.1 376 488C376 518.9 350.9 544 320 544C289.1 544 264 518.9 264 488C264 457.1 289.1 432 320 432zM376 320C376 350.9 350.9 376 320 376C289.1 376 264 350.9 264 320C264 289.1 289.1 264 320 264C350.9 264 376 289.1 376 320z"/></svg>
                                 </div>
                             </div>
                         </div>

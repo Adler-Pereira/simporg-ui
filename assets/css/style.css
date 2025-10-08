@@ -475,3 +475,9 @@ header {
   border-radius: 2px;
   cursor: pointer;
 }
+
+.ellipsis-icon {
+  height: 20px;
+  cursor: pointer;
+  fill: var(--color-text-main);
+}

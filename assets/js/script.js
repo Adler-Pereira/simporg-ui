@@ -14,8 +14,11 @@ const aside = document.querySelector('aside')
 const windowIconsWkspc = document.querySelectorAll('#project-workspace .window-icon')
 const btnAddCard = document.getElementById('add-card-text')
 const namingCard = document.getElementById('naming-card')
+const inputNameCard = document.getElementById('input-name-card')
 const btnCancelName = document.getElementById('btn-cancel-name')
-const btnAddName = document.getElementById('btn-add-name')
+const btnConfName = document.getElementById('btn-conf-name')
+const createdCard = document.getElementById('created-card')
+const nameCard = document.getElementById('name-card')
 
 togglePasswordIcons.forEach(function (icon) {
   icon.addEventListener('click', function () {
@@ -57,6 +60,9 @@ closeWorkspace.addEventListener('click', function () {
   namingCard.classList.remove('d-flex')
   btnAddCard.classList.add('d-flex')
   btnAddCard.classList.remove('d-none')
+
+  createdCard.classList.add('d-none')
+  createdCard.classList.remove('d-flex')
 })
 
 maxProjWkspc.addEventListener('click', function () {
@@ -101,6 +107,13 @@ formProj.addEventListener('submit', function (e) {
   projWorkspace.classList.remove('d-none')
 })
 
+btnAddCard.addEventListener('click', function () {
+  namingCard.classList.add('d-flex')
+  namingCard.classList.remove('d-none')
+  btnAddCard.classList.add('d-none')
+  btnAddCard.classList.remove('d-flex')
+})
+
 btnCancelName.addEventListener('click', function () {
   namingCard.classList.add('d-none')
   namingCard.classList.remove('d-flex')
@@ -108,9 +121,18 @@ btnCancelName.addEventListener('click', function () {
   btnAddCard.classList.remove('d-none')
 })
 
-btnAddCard.addEventListener('click', function () {
-  namingCard.classList.add('d-flex')
-  namingCard.classList.remove('d-none')
-  btnAddCard.classList.add('d-none')
-  btnAddCard.classList.remove('d-flex')
+btnConfName.addEventListener('click', function () {
+  let i = 0
+  
+  namingCard.classList.add('d-none')
+  namingCard.classList.remove('d-flex')
+  createdCard.classList.add('d-flex')
+  createdCard.classList.remove('d-none')
+
+  if (inputNameCard.value) {
+    nameCard.textContent = inputNameCard.value
+  } else {
+    nameCard.textContent = 'Sem-nome-' + i
+    i++
+  }
 })
