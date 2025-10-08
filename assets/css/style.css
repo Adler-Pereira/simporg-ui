@@ -12,6 +12,8 @@
 
   --color-border-default: #343A40;
   --color-border-muted: #00000033;
+
+  --color-btn-default: #343A40;
 }
 
 html {
@@ -51,6 +53,36 @@ header {
   background-color: var(--color-bg-highlight);
   border: 1px solid var(--color-border-muted);
   padding: 5px;
+}
+
+.btn-highlight {
+  background-color: var(--color-bg-highlight);
+  color: var(--color-bg-surface);
+  border: 0;
+  font-weight: 500;
+}
+
+.btn-highlight:hover {
+  filter: brightness(1.2);
+  background-color: var(--color-bg-highlight);
+  color: var(--color-bg-surface);
+  border: 0;
+  font-weight: 500;
+}
+
+.btn-default {
+  background-color: var(--color-btn-default);
+  color: var(--color-text-main);
+  border: 0;
+  font-weight: 500;
+}
+
+.btn-default:hover {
+  filter: brightness(1.2);
+  background-color: var(--color-btn-default);
+  color: var(--color-text-main);
+  border: 0;
+  font-weight: 500;
 }
 
 .profile {
@@ -285,7 +317,6 @@ header {
 .container-form-project {
   z-index: 1;
   height: 100%;
-  display: none;
 }
 
 .form-project {
@@ -383,14 +414,14 @@ header {
   margin-bottom: .25rem;
 }
 
-.form-input {
+.input-text {
   width: 100%;
   background-color: var(--color-bg-overlay);
   border: 1px solid var(--color-border-default);
   font-size: 14px;
 }
 
-.form-input:focus {
+.input-text:focus {
   outline: none;
 }
 
@@ -398,22 +429,6 @@ header {
   display: flex;
   height: 100px;
   resize: none;
-}
-
-.form-input-submit {
-  width: 100%;
-  background-color: var(--color-bg-highlight);
-  color: var(--color-bg-surface);
-  border: 0;
-  font-weight: 500;
-}
-
-.form-input-submit:hover {
-  filter: brightness(1.2);
-  background-color: var(--color-bg-highlight);
-  color: var(--color-bg-surface);
-  border: 0;
-  font-weight: 500;
 }
 
 .container-color-option {
@@ -425,7 +440,6 @@ header {
 }
 
 #project-workspace {
-  display: none;
   flex-direction: column;
   background-color: var(--color-bg-highlight);
 }
@@ -435,20 +449,29 @@ header {
   stroke: var(--color-bg-main);
 }
 
-.btn-add-card {
-  height: 40px;
+.container-card {
   width: 220px;
   margin-left: 25px;
   margin-right: 25px;
-  color: var(--color-text-main);
+  padding: 10px;
   background-color: var(--color-bg-main);
   border: 1px solid var(--color-border-default);
   border-radius: 5px;
-  font-size: small;
   font-weight: 500;
-  cursor: pointer;
 }
 
-.btn-add-card:focus {
-  outline: none;
+#add-card-text {
+  height: 40px;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-main);
+  font-size: small;
+  text-decoration: none;
+}
+
+.btn-naming-card {
+  width: 75px;
+  padding: 2px;
+  font-size: small;
+  border-radius: 2px;
+  cursor: pointer;
 }

@@ -12,6 +12,10 @@ const maxProjWkspc = document.getElementById('max-proj-wkspc')
 const minProjWkspc = document.getElementById('min-proj-wkspc')
 const aside = document.querySelector('aside')
 const windowIconsWkspc = document.querySelectorAll('#project-workspace .window-icon')
+const btnAddCard = document.getElementById('add-card-text')
+const namingCard = document.getElementById('naming-card')
+const btnCancelName = document.getElementById('btn-cancel-name')
+const btnAddName = document.getElementById('btn-add-name')
 
 togglePasswordIcons.forEach(function (icon) {
   icon.addEventListener('click', function () {
@@ -29,22 +33,30 @@ togglePasswordIcons.forEach(function (icon) {
 
 projectCard.forEach(function (card) {
   card.addEventListener('click', function () {
-    formProj.style.display = 'flex'
+    formProj.classList.remove('d-none')
+    formProj.classList.add('d-flex')
     inputTitleProj.focus()
   })  
 })
 
 closeFormProj.addEventListener('click', function () {
-  formProj.style.display = 'none'
+    formProj.classList.add('d-none')
+    formProj.classList.remove('d-flex')
 })
 
 closeWorkspace.addEventListener('click', function () {
-  projWorkspace.style.display = 'none'
-  cardsHub.style.display = 'flex'
-  projWorkspace.classList.remove('container-fluid', 'position-absolute')
+  projWorkspace.classList.add('d-none')
+  projWorkspace.classList.remove('container-fluid', 'position-absolute', 'd-flex')
+  cardsHub.classList.add('d-flex')
+  cardsHub.classList.remove('d-none')
   aside.classList.add('d-md-flex')
   maxProjWkspc.classList.remove('d-none')
   minProjWkspc.classList.remove('d-flex')
+  
+  namingCard.classList.add('d-none')
+  namingCard.classList.remove('d-flex')
+  btnAddCard.classList.add('d-flex')
+  btnAddCard.classList.remove('d-none')
 })
 
 maxProjWkspc.addEventListener('click', function () {
@@ -81,7 +93,24 @@ optionColor.forEach(function (option) {
 
 formProj.addEventListener('submit', function (e) {
   e.preventDefault()
-  formProj.style.display = 'none'
-  cardsHub.style.display = 'none'
-  projWorkspace.style.display = 'flex'
+  formProj.classList.add('d-none')
+  formProj.classList.remove('d-flex')
+  cardsHub.classList.add('d-none')
+  cardsHub.classList.remove('d-flex')
+  projWorkspace.classList.add('d-flex')
+  projWorkspace.classList.remove('d-none')
+})
+
+btnCancelName.addEventListener('click', function () {
+  namingCard.classList.add('d-none')
+  namingCard.classList.remove('d-flex')
+  btnAddCard.classList.add('d-flex')
+  btnAddCard.classList.remove('d-none')
+})
+
+btnAddCard.addEventListener('click', function () {
+  namingCard.classList.add('d-flex')
+  namingCard.classList.remove('d-none')
+  btnAddCard.classList.add('d-none')
+  btnAddCard.classList.remove('d-flex')
 })
