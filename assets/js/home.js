@@ -1,4 +1,4 @@
-const togglePasswordIcons = document.querySelectorAll('.togglePassword')
+// Seletores principais
 const projectCard = document.querySelectorAll('.project-card')
 const closeFormProj = document.getElementById('close-form-project')
 const formProj = document.getElementById('form-project')
@@ -20,34 +20,23 @@ const btnConfName = document.getElementById('btn-conf-name')
 const createdCard = document.getElementById('created-card')
 const nameCard = document.getElementById('name-card')
 
-togglePasswordIcons.forEach(function (icon) {
-  icon.addEventListener('click', function () {
-    // Encontra o input relacionado ao ícone
-    const input = this.previousElementSibling
-
-    const type = input.getAttribute('type') === 'password' ? 'text' : 'password'
-    input.setAttribute('type', type)
-
-    // Alternar ícone do olho
-    this.classList.toggle('fa-eye')
-    this.classList.toggle('fa-eye-slash')
-  })
-})
-
-projectCard.forEach(function (card) {
-  card.addEventListener('click', function () {
+// Abrir formulário de novo projeto
+projectCard.forEach(card => {
+  card.addEventListener('click', () => {
     formProj.classList.remove('d-none')
     formProj.classList.add('d-flex')
     inputTitleProj.focus()
-  })  
+  })
 })
 
-closeFormProj.addEventListener('click', function () {
-    formProj.classList.add('d-none')
-    formProj.classList.remove('d-flex')
+// Fechar formulário de novo projeto
+closeFormProj.addEventListener('click', () => {
+  formProj.classList.add('d-none')
+  formProj.classList.remove('d-flex')
 })
 
-closeWorkspace.addEventListener('click', function () {
+// Fechar workspace
+closeWorkspace.addEventListener('click', () => {
   projWorkspace.classList.add('d-none')
   projWorkspace.classList.remove('container-fluid', 'position-absolute', 'd-flex')
   cardsHub.classList.add('d-flex')
@@ -55,7 +44,7 @@ closeWorkspace.addEventListener('click', function () {
   aside.classList.add('d-md-flex')
   maxProjWkspc.classList.remove('d-none')
   minProjWkspc.classList.remove('d-flex')
-  
+
   namingCard.classList.add('d-none')
   namingCard.classList.remove('d-flex')
   btnAddCard.classList.add('d-flex')
@@ -65,21 +54,24 @@ closeWorkspace.addEventListener('click', function () {
   createdCard.classList.remove('d-flex')
 })
 
-maxProjWkspc.addEventListener('click', function () {
+// Maximizar workspace
+maxProjWkspc.addEventListener('click', () => {
   projWorkspace.classList.add('container-fluid', 'position-absolute')
   aside.classList.remove('d-md-flex')
   maxProjWkspc.classList.add('d-none')
   minProjWkspc.classList.add('d-flex')
 })
 
-minProjWkspc.addEventListener('click', function () {
+// Minimizar workspace
+minProjWkspc.addEventListener('click', () => {
   projWorkspace.classList.remove('container-fluid', 'position-absolute')
   aside.classList.add('d-md-flex')
   maxProjWkspc.classList.remove('d-none')
   minProjWkspc.classList.remove('d-flex')
 })
 
-optionColor.forEach(function (option) {
+// Alterar cor do projeto
+optionColor.forEach(option => {
   option.addEventListener('click', function () {
     previewBgProj.style.backgroundColor = option.style.backgroundColor
     projWorkspace.style.backgroundColor = option.style.backgroundColor
@@ -97,7 +89,8 @@ optionColor.forEach(function (option) {
   })
 })
 
-formProj.addEventListener('submit', function (e) {
+// Submeter formulário de projeto
+formProj.addEventListener('submit', e => {
   e.preventDefault()
   formProj.classList.add('d-none')
   formProj.classList.remove('d-flex')
@@ -107,21 +100,24 @@ formProj.addEventListener('submit', function (e) {
   projWorkspace.classList.remove('d-none')
 })
 
-btnAddCard.addEventListener('click', function () {
+// Adicionar card
+btnAddCard.addEventListener('click', () => {
   namingCard.classList.add('d-flex')
   namingCard.classList.remove('d-none')
   btnAddCard.classList.add('d-none')
   btnAddCard.classList.remove('d-flex')
 })
 
-btnCancelName.addEventListener('click', function () {
+// Cancelar nome do card
+btnCancelName.addEventListener('click', () => {
   namingCard.classList.add('d-none')
   namingCard.classList.remove('d-flex')
   btnAddCard.classList.add('d-flex')
   btnAddCard.classList.remove('d-none')
 })
 
-btnConfName.addEventListener('click', function () {
+// Confirmar nome do card
+btnConfName.addEventListener('click', () => {
   let i = 0
   
   namingCard.classList.add('d-none')
