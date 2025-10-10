@@ -19,7 +19,7 @@ const btnCancelName = document.getElementById('btn-cancel-name')
 const btnConfName = document.getElementById('btn-conf-name')
 const createdCard = document.getElementById('created-card')
 const nameCard = document.getElementById('name-card')
-const tempTask = document.getElementById('temp-task-card')
+const tempTask = document.getElementById('template-card')
 const wkspcContent = document.getElementById('wkspc-content')
 
 // Abrir formulário de novo projeto
@@ -100,9 +100,6 @@ formProj.addEventListener('submit', e => {
   cardsHub.classList.remove('d-flex')
   projWorkspace.classList.add('d-flex')
   projWorkspace.classList.remove('d-none')
-
-  const clone = tempTask.content.cloneNode(true)
-  wkspcContent.appendChild(clone)
 })
 
 // Adicionar card
@@ -134,12 +131,17 @@ btnConfName.addEventListener('click', () => {
   // Cria o novo card a partir do template
   const clone = templateCard.content.cloneNode(true)
   const h6 = clone.querySelector('h6')
-  h6.textContent = inputNameCard.value.trim() || `Sem-nome-${cardCounter}`
+
+  if (inputNameCard.value.trim()) {
+    h6.textContent = inputNameCard.value.trim()
+  } else {
+    h6.textContent = `Sem-nome-${cardCounter}`
+    cardCounter++
+  }
 
   // Adiciona o card ao container
   wkspcContent.insertBefore(clone, btnAddCard.parentElement)
 
-  cardCounter++
   inputNameCard.value = ''
 })
 

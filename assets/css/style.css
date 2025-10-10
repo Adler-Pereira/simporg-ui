@@ -493,3 +493,17 @@ header {
   scroll-behavior: smooth;  /* rolagem mais fluida */
   padding-bottom: 1rem;     /* para o scroll não colar no rodapé */
 }
+
+.max-container {
+  flex-wrap: wrap; /* segurança extra */
+}
+
+main {
+  height: 100vh; padding: 0px; width: 100%;
+}
+
+@media (min-width: 768px) {
+  main {
+    width: calc(100% - 180px)
+  }
+}
