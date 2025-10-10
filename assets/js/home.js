@@ -19,6 +19,8 @@ const btnCancelName = document.getElementById('btn-cancel-name')
 const btnConfName = document.getElementById('btn-conf-name')
 const createdCard = document.getElementById('created-card')
 const nameCard = document.getElementById('name-card')
+const tempTask = document.getElementById('temp-task-card')
+const wkspcContent = document.getElementById('wkspc-content')
 
 // Abrir formulário de novo projeto
 projectCard.forEach(card => {
@@ -98,6 +100,9 @@ formProj.addEventListener('submit', e => {
   cardsHub.classList.remove('d-flex')
   projWorkspace.classList.add('d-flex')
   projWorkspace.classList.remove('d-none')
+
+  const clone = tempTask.content.cloneNode(true)
+  wkspcContent.appendChild(clone)
 })
 
 // Adicionar card
@@ -117,18 +122,25 @@ btnCancelName.addEventListener('click', () => {
 })
 
 // Confirmar nome do card
+const templateCard = document.getElementById('template-card')
+let cardCounter = 1
+
 btnConfName.addEventListener('click', () => {
-  let i = 0
-  
   namingCard.classList.add('d-none')
   namingCard.classList.remove('d-flex')
-  createdCard.classList.add('d-flex')
-  createdCard.classList.remove('d-none')
+  btnAddCard.classList.add('d-flex')
+  btnAddCard.classList.remove('d-none')
 
-  if (inputNameCard.value) {
-    nameCard.textContent = inputNameCard.value
-  } else {
-    nameCard.textContent = 'Sem-nome-' + i
-    i++
-  }
+  // Cria o novo card a partir do template
+  const clone = templateCard.content.cloneNode(true)
+  const h6 = clone.querySelector('h6')
+  h6.textContent = inputNameCard.value.trim() || `Sem-nome-${cardCounter}`
+
+  // Adiciona o card ao container
+  wkspcContent.insertBefore(clone, btnAddCard.parentElement)
+
+  cardCounter++
+  inputNameCard.value = ''
 })
+
+

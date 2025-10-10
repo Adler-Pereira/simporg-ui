@@ -71,7 +71,7 @@
             </form>
         </div>
         <div class="container-fluid">
-            <div class="row bg-dark">
+            <div class="row bg-dark" style="flex-wrap: nowrap;">
                 <aside class="color-bg-surface d-none d-md-flex align-items-center flex-column" style="width: 14%; min-width: 180px;">
                     <img src="../assets/images/default-profile.png" alt="foto-de-perfil" class="profile" style="margin-top: 18px;">
                     <a href="#" class="edit-icon">
@@ -118,21 +118,29 @@
                             <svg class="window-icon resize-proj-wkspc d-none" id="min-proj-wkspc" viewBox="0 0 24 24" id="minimize-size" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M8.71,15.29,3,21M8.71,8.71,3,3M21,21l-5.71-5.71M21,3,15.29,8.71" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-2" data-name="primary" d="M4,15H8a1,1,0,0,1,1,1v4" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-3" data-name="primary" d="M9,4V8A1,1,0,0,1,8,9H4" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-4" data-name="primary" d="M15,20V16a1,1,0,0,1,1-1h4" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-5" data-name="primary" d="M20,9H16a1,1,0,0,1-1-1V4" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></g></svg>
                             <svg class="window-icon" id="close-proj-wkspc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/></svg>
                         </div>
-                        <div class="container-fluid max-container" style="padding-left: 35px; padding-right: 35px;">
-                            <button class="btn container-card d-flex justify-content-center align-items-center" id="add-card-text">Adicionar cartão</button>
-                            <div class="container-card d-none justify-content-center align-items-center flex-column" id="naming-card">
-                                <div class="container-fluid d-flex flex-column p-0">
-                                    <input id="input-name-card" class="container-fluid color-text-main input-text pl-1 m-0" type="text" placeholder="Nomear cartão..." maxlength="15"/>
-                                    <div class="container-fluid d-flex justify-content-between p-0 mt-2">
-                                        <button class="btn btn-highlight btn-naming-card" id="btn-cancel-name">Cancelar</button>
-                                        <button class="btn btn-default btn-naming-card" id="btn-conf-name">Confirmar</button>
+                        <div id="wkspc-content" class="container-fluid max-container d-flex" style="padding-left: 35px; padding-right: 35px;">
+                            <template id="template-card">
+                                <div class="task-card">
+                                    <div class="container-card flex-column" style="padding: 20px;">
+                                        <div class="container-fluid d-flex justify-content-between p-0">
+                                            <h6 class="color-text-main m-0" style="font-weight: normal;"></h6>
+                                            <svg class="ellipsis-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                                <path d="M320 208C289.1 208 264 182.9 264 152C264 121.1 289.1 96 320 96C350.9 96 376 121.1 376 152C376 182.9 350.9 208 320 208zM320 432C350.9 432 376 457.1 376 488C376 518.9 350.9 544 320 544C289.1 544 264 518.9 264 488C264 457.1 289.1 432 320 432zM376 320C376 350.9 350.9 376 320 376C289.1 376 264 350.9 264 320C264 289.1 289.1 264 320 264C350.9 264 376 289.1 376 320z"/>
+                                            </svg>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div id="created-card" class="container-card d-none flex-column" style="padding: 20px;">
-                                <div class="container-fluid d-flex justify-content-between p-0">
-                                    <h6 id="name-card" class="color-text-main m-0" style="font-weight: normal;"></h6>
-                                    <svg class="ellipsis-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 208C289.1 208 264 182.9 264 152C264 121.1 289.1 96 320 96C350.9 96 376 121.1 376 152C376 182.9 350.9 208 320 208zM320 432C350.9 432 376 457.1 376 488C376 518.9 350.9 544 320 544C289.1 544 264 518.9 264 488C264 457.1 289.1 432 320 432zM376 320C376 350.9 350.9 376 320 376C289.1 376 264 350.9 264 320C264 289.1 289.1 264 320 264C350.9 264 376 289.1 376 320z"/></svg>
+                            </template>
+                            <div class="task-card">
+                                <button class="btn container-card d-flex justify-content-center align-items-center" id="add-card-text">Adicionar cartão</button>
+                                <div class="container-card d-none justify-content-center align-items-center flex-column" id="naming-card">
+                                    <div class="container-fluid d-flex flex-column p-0">
+                                        <input id="input-name-card" class="container-fluid color-text-main input-text pl-1 m-0" type="text" placeholder="Nomear cartão..." maxlength="15"/>
+                                        <div class="container-fluid d-flex justify-content-between p-0 mt-2">
+                                            <button class="btn btn-highlight btn-naming-card" id="btn-cancel-name">Cancelar</button>
+                                            <button class="btn btn-default btn-naming-card" id="btn-conf-name">Confirmar</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

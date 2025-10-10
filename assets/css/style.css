@@ -20,6 +20,8 @@ html {
   scrollbar-color: var(--color-bg-surface) var(--color-bg-overlay);
 }
 
+
+
 .color-text-main {
   color: var(--color-text-main);
 }
@@ -480,4 +482,14 @@ header {
   height: 20px;
   cursor: pointer;
   fill: var(--color-text-main);
+}
+
+#wkspc-content {
+  display: flex;            /* mantém os elementos lado a lado */
+  gap: 1rem;                /* espaço entre os cards (opcional) */
+  overflow-x: auto;         /* ativa o scroll horizontal só aqui */
+  overflow-y: hidden;       /* evita scroll vertical acidental */
+  white-space: nowrap;      /* impede quebra de linha */
+  scroll-behavior: smooth;  /* rolagem mais fluida */
+  padding-bottom: 1rem;     /* para o scroll não colar no rodapé */
 }
