@@ -77,16 +77,19 @@ optionColor.forEach(option => {
   option.addEventListener('click', function () {
     previewBgProj.style.backgroundColor = option.style.backgroundColor
     projWorkspace.style.backgroundColor = option.style.backgroundColor
-    if (option.style.backgroundColor == 'rgb(227, 126, 3)' || option.style.backgroundColor == 'white') {
+
+    if (option.style.backgroundColor == 'rgb(227, 126, 3)' || option.style.backgroundColor == 'white' || option.style.backgroundColor == 'rgb(97, 99, 180)') {
       windowIconsWkspc.forEach(function (icon) {
         icon.style.fill = 'var(--color-bg-main)'
         icon.style.stroke = 'var(--color-bg-main)'
       })
+      projWorkspace.style.scrollbarColor = 'var(--color-bg-surface) var(--color-bg-overlay)'
     } else {
       windowIconsWkspc.forEach(function (icon) {
         icon.style.fill = 'var(--color-bg-highlight)'
         icon.style.stroke = 'var(--color-bg-highlight)'
       })
+      projWorkspace.style.scrollbarColor = 'var(--color-bg-highlight) var(--color-bg-overlay)'
     }
   })
 })
