@@ -20,8 +20,6 @@ html {
   scrollbar-color: var(--color-bg-surface) var(--color-bg-overlay);
 }
 
-
-
 .color-text-main {
   color: var(--color-text-main);
 }
@@ -502,8 +500,16 @@ main {
   height: 100vh; padding: 0px; width: 100%;
 }
 
+.auth-sides {
+  display: none;
+}
+
 @media (min-width: 768px) {
   main {
     width: calc(100% - 180px)
+  }
+
+  .auth-sides {
+    display: flex;
   }
 }
