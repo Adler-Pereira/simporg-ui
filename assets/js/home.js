@@ -22,6 +22,7 @@ const nameCard = document.getElementById('name-card')
 const tempTask = document.getElementById('template-card')
 const wkspcContent = document.getElementById('wkspc-content')
 const html = document.querySelector('html')
+const main = document.querySelector('main')
 
 // Abrir formulário de novo projeto
 projectCard.forEach(card => {
@@ -41,6 +42,7 @@ closeFormProj.addEventListener('click', () => {
 // Fechar workspace
 closeWorkspace.addEventListener('click', () => {
   html.style.backgroundColor = 'var(--color-bg-main)'
+  main.style.backgroundColor = 'var(--color-bg-main)'
 
   projWorkspace.classList.add('d-none')
   projWorkspace.classList.remove('container-fluid', 'position-absolute', 'd-flex')
@@ -61,6 +63,12 @@ closeWorkspace.addEventListener('click', () => {
 
 // Maximizar workspace
 maxProjWkspc.addEventListener('click', () => {
+  if (projWorkspace.style.backgroundColor) {
+    main.style.backgroundColor = projWorkspace.style.backgroundColor
+  } else {
+    main.style.backgroundColor = 'rgb(227, 126, 3)'
+  }
+
   projWorkspace.classList.add('container-fluid', 'position-absolute')
   aside.classList.remove('d-md-flex')
   maxProjWkspc.classList.add('d-none')

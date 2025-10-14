@@ -498,7 +498,10 @@ header {
 }
 
 main {
-  height: 100vh; padding: 0px; width: 100%;
+  height: 100vh;
+  width: 100%;
+  padding: 0px;
+  background-color: var(--color-bg-main);
 }
 
 .auth-sides {
