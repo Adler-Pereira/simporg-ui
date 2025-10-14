@@ -21,6 +21,7 @@ const createdCard = document.getElementById('created-card')
 const nameCard = document.getElementById('name-card')
 const tempTask = document.getElementById('template-card')
 const wkspcContent = document.getElementById('wkspc-content')
+const html = document.querySelector('html')
 
 // Abrir formulário de novo projeto
 projectCard.forEach(card => {
@@ -39,6 +40,8 @@ closeFormProj.addEventListener('click', () => {
 
 // Fechar workspace
 closeWorkspace.addEventListener('click', () => {
+  html.style.backgroundColor = 'var(--color-bg-main)'
+
   projWorkspace.classList.add('d-none')
   projWorkspace.classList.remove('container-fluid', 'position-absolute', 'd-flex')
   cardsHub.classList.add('d-flex')
@@ -97,6 +100,11 @@ optionColor.forEach(option => {
 // Submeter formulário de projeto
 formProj.addEventListener('submit', e => {
   e.preventDefault()
+  if (projWorkspace.style.backgroundColor) {
+    html.style.backgroundColor = projWorkspace.style.backgroundColor
+  } else {
+    html.style.backgroundColor = 'rgb(227, 126, 3)'
+  }
   formProj.classList.add('d-none')
   formProj.classList.remove('d-flex')
   cardsHub.classList.add('d-none')
