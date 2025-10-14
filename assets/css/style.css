@@ -477,9 +477,15 @@ header {
   cursor: pointer;
 }
 
+.card-options {
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+}
+
 .ellipsis-icon {
   height: 20px;
-  cursor: pointer;
   fill: var(--color-text-main);
 }
 

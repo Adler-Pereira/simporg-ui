@@ -101,7 +101,7 @@
                             </div>
                         </div>
                     </header>
-                    <div class="max-container d-flex" id="cards-proj-hub">
+                    <div class="max-container d-none" id="cards-proj-hub">
                         <a class="project-card d-flex flex-column justify-content-center align-items-center" href="#">
                             <h5 class="transparent-text mb-4">Criar novo projeto</h5>
                             <div class="square-add-icon d-flex justify-content-center align-items-center mt-4">
@@ -112,7 +112,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="max-container d-none flex-row" id="project-workspace">
+                    <div class="max-container d-flex flex-row" id="project-workspace">
                         <div class="container-fluid d-flex justify-content-end" style="padding: 20px; padding-right: 25px;">
                             <svg class="window-icon resize-proj-wkspc" id="max-proj-wkspc" viewBox="0 0 24 24" id="maximize-size" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M9,9,3.29,3.29M15,9l5.71-5.71M9,15,3.29,20.71m17.42,0L15,15" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-2" data-name="primary" d="M3,8V4A1,1,0,0,1,4,3H8" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-3" data-name="primary" d="M16,3h4a1,1,0,0,1,1,1V8" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-4" data-name="primary" d="M8,21H4a1,1,0,0,1-1-1V16" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-5" data-name="primary" d="M21,16v4a1,1,0,0,1-1,1H16" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></g></svg>
                             <svg class="window-icon resize-proj-wkspc d-none" id="min-proj-wkspc" viewBox="0 0 24 24" id="minimize-size" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M8.71,15.29,3,21M8.71,8.71,3,3M21,21l-5.71-5.71M21,3,15.29,8.71" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-2" data-name="primary" d="M4,15H8a1,1,0,0,1,1,1v4" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-3" data-name="primary" d="M9,4V8A1,1,0,0,1,8,9H4" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-4" data-name="primary" d="M15,20V16a1,1,0,0,1,1-1h4" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-5" data-name="primary" d="M20,9H16a1,1,0,0,1-1-1V4" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></g></svg>
@@ -124,9 +124,11 @@
                                     <div class="container-card flex-column" style="padding: 20px;">
                                         <div class="container-fluid d-flex justify-content-between p-0">
                                             <h6 class="color-text-main m-0" style="font-weight: normal;"></h6>
-                                            <svg class="ellipsis-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                                                <path d="M320 208C289.1 208 264 182.9 264 152C264 121.1 289.1 96 320 96C350.9 96 376 121.1 376 152C376 182.9 350.9 208 320 208zM320 432C350.9 432 376 457.1 376 488C376 518.9 350.9 544 320 544C289.1 544 264 518.9 264 488C264 457.1 289.1 432 320 432zM376 320C376 350.9 350.9 376 320 376C289.1 376 264 350.9 264 320C264 289.1 289.1 264 320 264C350.9 264 376 289.1 376 320z"/>
-                                            </svg>
+                                            <button class="card-options d-flex">
+                                                <svg class="ellipsis-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                                    <path d="M320 208C289.1 208 264 182.9 264 152C264 121.1 289.1 96 320 96C350.9 96 376 121.1 376 152C376 182.9 350.9 208 320 208zM320 432C350.9 432 376 457.1 376 488C376 518.9 350.9 544 320 544C289.1 544 264 518.9 264 488C264 457.1 289.1 432 320 432zM376 320C376 350.9 350.9 376 320 376C289.1 376 264 350.9 264 320C264 289.1 289.1 264 320 264C350.9 264 376 289.1 376 320z"/>
+                                                </svg>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
