@@ -1,4 +1,3 @@
-// Seletores principais
 const projectCard = document.querySelectorAll('.project-card')
 const closeFormProj = document.getElementById('close-form-project')
 const formProj = document.getElementById('form-project')
@@ -160,8 +159,30 @@ btnConfName.addEventListener('click', () => {
 
   // Adiciona o card ao container
   wkspcContent.insertBefore(clone, btnAddCard.parentElement)
-
   inputNameCard.value = ''
-})
 
+  const lastCard = wkspcContent.querySelector('.task-card:nth-last-child(2)')
+  const btnCardOpts = lastCard.querySelector('.btn-card-options')
+  const cardOptions = lastCard.querySelector('.card-options')
+
+  btnCardOpts.addEventListener('click', e => {
+    e.stopPropagation()
+
+    // Fecha todos os outros menus antes de abrir o atual
+    document.querySelectorAll('.card-options').forEach(opt => {
+      opt.classList.add('d-none')
+      opt.classList.remove('d-flex')
+    })
+
+    cardOptions.classList.remove('d-none')
+    cardOptions.classList.add('d-flex')
+  })
+
+  cardOptions.addEventListener('click', e => e.stopPropagation())
+
+  document.addEventListener('click', () => {
+    cardOptions.classList.add('d-none')
+    cardOptions.classList.remove('d-flex')
+  })
+})
 
