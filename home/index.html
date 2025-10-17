@@ -70,18 +70,21 @@
                 </div>
             </form>
         </div>
-        <div class="position-absolute container-fluid max-container d-none justify-content-center align-items-center" style="background-color: #0000007e; z-index: 1;">
-            <div class="" style="width: 750px; height: 325px; background-color: #1E1E1E; padding: 15px;">
+        <div id="delete-message" class="position-absolute container-fluid max-container d-none justify-content-center align-items-center" style="background-color: #0000007e; z-index: 1;">
+            <div class="d-flex flex-column align-items-end" style="width: 750px; height: 325px; background-color: #1E1E1E; padding: 15px;">
                 <div class="container-fluid d-flex justify-content-end" style="padding: 0;">
-                    <svg class="window-icon" id="close-form-project" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="#e37e03" d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/></svg>
+                    <svg class="window-icon" id="close-del-message" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="#e37e03" d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/></svg>
                 </div>
-                <div class="container-fluid max-container" style="height: calc(100% - 50px);">
+                <div class="d-flex align-items-center container-fluid max-container" style="height: calc(100% - 50px);">
                     <h4 class="delete-message">
-                        Você está deletando o cartão <i>Sem-nome-0</i> do seu projeto <i>Sem-título-0</i>. Após deletar, <b>você não poderá recuperar</b> esse cartão e nenhum dos conteúdos associados a ele.
-                        </br></br>
-
-                            Se está ciente, aperte o botão Deletar para confirmar a exclusão.
+                        Você está deletando o cartão <i id="card-name-message"></i> do seu projeto <i>Sem-título-0</i>. Após deletar, <b>você não poderá recuperar</b> esse cartão e nenhum dos conteúdos associados a ele.
+                    </br></br>
+                        Se está ciente, aperte o botão <i style="color: white;">Deletar</i> para confirmar a exclusão.
                     </h4>
+                </div>
+                <div>
+                    <button id="btn-cancel-del" class="btn btn-highlight mr-2">Cancelar</button>
+                    <button id="btn-confirm-del" class="btn btn-danger ml-2">Deletar</button>
                 </div>
             </div>
         </div>
@@ -148,7 +151,7 @@
                                                 <div class="position-relative">
                                                     <ul id="card-options" class="card-options d-none flex-column position-absolute m-0 p-0">
                                                         <li>
-                                                            <button class="p-2" style="border: 0; width: 100%; background-color: transparent; cursor: pointer; color: red;">
+                                                            <button class="btn-option-del p-2" style="border: 0; width: 100%; background-color: transparent; cursor: pointer; color: red;">
                                                                 <svg style="fill: red; height: 15px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M232.7 69.9L224 96L128 96C110.3 96 96 110.3 96 128C96 145.7 110.3 160 128 160L512 160C529.7 160 544 145.7 544 128C544 110.3 529.7 96 512 96L416 96L407.3 69.9C402.9 56.8 390.7 48 376.9 48L263.1 48C249.3 48 237.1 56.8 232.7 69.9zM512 208L128 208L149.1 531.1C150.7 556.4 171.7 576 197 576L443 576C468.3 576 489.3 556.4 490.9 531.1L512 208z"/></svg>
                                                                 Deletar cartão
                                                             </button>

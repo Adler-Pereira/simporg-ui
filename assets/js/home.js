@@ -22,6 +22,11 @@ const tempTask = document.getElementById('template-card')
 const wkspcContent = document.getElementById('wkspc-content')
 const html = document.querySelector('html')
 const main = document.querySelector('main')
+const btnConfDel = document.getElementById('btn-confirm-del')
+const btnCancelDel = document.getElementById('btn-cancel-del')
+const closeDelMessage = document.getElementById('close-del-message')
+const deleteMessage = document.getElementById('delete-message')
+const cardNameMessage = document.getElementById('card-name-message')
 
 // Abrir formulário de novo projeto
 projectCard.forEach(card => {
@@ -184,5 +189,29 @@ btnConfName.addEventListener('click', () => {
     cardOptions.classList.add('d-none')
     cardOptions.classList.remove('d-flex')
   })
+
+  const btnOptionDel = cardOptions.querySelector('.btn-option-del')
+
+  btnOptionDel.addEventListener('click', () => {
+    cardNameMessage.textContent = h6.textContent;
+    deleteMessage.classList.add('d-flex')
+    deleteMessage.classList.remove('d-none')
+  })
+
+
 })
 
+closeDelMessage.addEventListener('click', () => {
+  deleteMessage.classList.add('d-none')
+  deleteMessage.classList.remove('d-flex')
+})
+
+btnCancelDel.addEventListener('click', () => {
+  deleteMessage.classList.add('d-none')
+  deleteMessage.classList.remove('d-flex')
+})
+
+btnConfDel.addEventListener('click', () => {
+  deleteMessage.classList.add('d-none')
+  deleteMessage.classList.remove('d-flex')
+})
