@@ -13,7 +13,7 @@
         <div id="form-project" class="position-absolute container-fluid d-none align-items-center justify-content-center container-form-project">
             <form class="form-project">
                 <div class="container-fluid d-flex justify-content-end" style="padding: 0;">
-                    <svg class="window-icon" id="close-form-project" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="#e37e03" d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/></svg>
+                    <svg id="close-form-project" class="window-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="#e37e03" d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/></svg>
                 </div>
                 <div class="d-flex flex-column justify-content-center" style="height: calc(100% - 50px);">
                     <h5 class="color-text-main mb-3 ml-2">Criar novo projeto</h5>
@@ -73,7 +73,7 @@
         <div id="delete-message" class="position-absolute container-fluid max-container d-none justify-content-center align-items-center" style="background-color: #0000007e; z-index: 1;">
             <div class="d-flex flex-column align-items-end" style="width: 750px; height: 325px; background-color: #1E1E1E; padding: 15px;">
                 <div class="container-fluid d-flex justify-content-end" style="padding: 0;">
-                    <svg class="window-icon" id="close-del-message" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="#e37e03" d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/></svg>
+                    <svg id="close-del-message" class="window-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="#e37e03" d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/></svg>
                 </div>
                 <div class="d-flex align-items-center container-fluid max-container" style="height: calc(100% - 50px);">
                     <h4 class="delete-message">
@@ -119,7 +119,7 @@
                             </div>
                         </div>
                     </header>
-                    <div class="max-container d-flex" id="cards-proj-hub">
+                    <div id="cards-proj-hub" class="max-container d-flex">
                         <a class="project-card d-flex flex-column justify-content-center align-items-center" href="#">
                             <h5 class="transparent-text mb-4">Criar novo projeto</h5>
                             <div class="square-add-icon d-flex justify-content-center align-items-center mt-4">
@@ -130,11 +130,11 @@
                             </div>
                         </a>
                     </div>
-                    <div class="max-container d-none flex-row" id="project-workspace">
+                    <div id="project-workspace" class="max-container d-none flex-row">
                         <div class="container-fluid d-flex justify-content-end" style="padding: 20px; padding-right: 25px;">
-                            <svg class="window-icon resize-proj-wkspc" id="max-proj-wkspc" viewBox="0 0 24 24" id="maximize-size" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M9,9,3.29,3.29M15,9l5.71-5.71M9,15,3.29,20.71m17.42,0L15,15" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-2" data-name="primary" d="M3,8V4A1,1,0,0,1,4,3H8" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-3" data-name="primary" d="M16,3h4a1,1,0,0,1,1,1V8" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-4" data-name="primary" d="M8,21H4a1,1,0,0,1-1-1V16" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-5" data-name="primary" d="M21,16v4a1,1,0,0,1-1,1H16" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></g></svg>
-                            <svg class="window-icon resize-proj-wkspc d-none" id="min-proj-wkspc" viewBox="0 0 24 24" id="minimize-size" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M8.71,15.29,3,21M8.71,8.71,3,3M21,21l-5.71-5.71M21,3,15.29,8.71" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-2" data-name="primary" d="M4,15H8a1,1,0,0,1,1,1v4" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-3" data-name="primary" d="M9,4V8A1,1,0,0,1,8,9H4" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-4" data-name="primary" d="M15,20V16a1,1,0,0,1,1-1h4" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-5" data-name="primary" d="M20,9H16a1,1,0,0,1-1-1V4" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></g></svg>
-                            <svg class="window-icon" id="close-proj-wkspc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/></svg>
+                            <svg id="max-proj-wkspc" class="window-icon resize-proj-wkspc" viewBox="0 0 24 24" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M9,9,3.29,3.29M15,9l5.71-5.71M9,15,3.29,20.71m17.42,0L15,15" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-2" data-name="primary" d="M3,8V4A1,1,0,0,1,4,3H8" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-3" data-name="primary" d="M16,3h4a1,1,0,0,1,1,1V8" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-4" data-name="primary" d="M8,21H4a1,1,0,0,1-1-1V16" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-5" data-name="primary" d="M21,16v4a1,1,0,0,1-1,1H16" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></g></svg>
+                            <svg id="min-proj-wkspc" class="window-icon resize-proj-wkspc d-none" viewBox="0 0 24 24" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M8.71,15.29,3,21M8.71,8.71,3,3M21,21l-5.71-5.71M21,3,15.29,8.71" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-2" data-name="primary" d="M4,15H8a1,1,0,0,1,1,1v4" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-3" data-name="primary" d="M9,4V8A1,1,0,0,1,8,9H4" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-4" data-name="primary" d="M15,20V16a1,1,0,0,1,1-1h4" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><path id="primary-5" data-name="primary" d="M20,9H16a1,1,0,0,1-1-1V4" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></g></svg>
+                            <svg id="close-proj-wkspc" class="window-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/></svg>
                         </div>
                         <div id="wkspc-content" class="container-fluid max-container d-flex flex-nowrap" style="padding-left: 35px; padding-right: 35px; height: calc(100% - 65px);">
                             <template id="template-card">
@@ -170,13 +170,13 @@
                                 </div>
                             </template>
                             <div class="task-card">
-                                <button class="btn container-card d-flex justify-content-center align-items-center" id="add-card-text">Adicionar cartão</button>
-                                <div class="container-card d-none justify-content-center align-items-center flex-column" id="naming-card">
+                                <button id="add-card-text" class="btn container-card d-flex justify-content-center align-items-center">Adicionar cartão</button>
+                                <div id="naming-card" class="container-card d-none justify-content-center align-items-center flex-column">
                                     <div class="container-fluid d-flex flex-column p-0">
                                         <input id="input-name-card" class="container-fluid color-text-main input-text pl-1 m-0" type="text" placeholder="Nomear cartão..." maxlength="15"/>
                                         <div class="container-fluid d-flex justify-content-between p-0 mt-2">
-                                            <button class="btn btn-highlight btn-naming-card" id="btn-cancel-name">Cancelar</button>
-                                            <button class="btn btn-default btn-naming-card" id="btn-conf-name">Confirmar</button>
+                                            <button id="btn-cancel-name" class="btn btn-highlight btn-naming-card">Cancelar</button>
+                                            <button id="btn-conf-name" class="btn btn-default btn-naming-card">Confirmar</button>
                                         </div>
                                     </div>
                                 </div>
