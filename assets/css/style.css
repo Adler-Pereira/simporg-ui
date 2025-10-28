@@ -98,7 +98,7 @@ header {
   font-weight: 500;
 }
 
-.my-teams-font {
+.my-projects-font {
   margin: 0;
   font-weight: 500;
   text-transform: uppercase;
@@ -112,7 +112,7 @@ header {
   transform: translate(22.5px, 47.5px);
 }
 
-.scroll-box-teams {
+.scroll-box-projects {
   overflow-y: auto;
   height: calc(100vh - 167.44px);
   /* ajusta o valor conforme a altura do topo */
@@ -124,18 +124,18 @@ header {
   scrollbar-color: var(--color-bg-surface) var(--color-bg-overlay);
 }
 
-.scroll-box-teams a li {
+.scroll-box-projects a li {
   height: 25px;
   display: flex;
   align-items: center;
   padding-left: 10px;
 }
 
-.scroll-box-teams a li:hover {
+.scroll-box-projects a li:hover {
   background-color: var(--color-bg-main);
 }
 
-.scroll-box-teams a {
+.scroll-box-projects a {
   color: var(--color-text-main);
   text-decoration: none;
 }
